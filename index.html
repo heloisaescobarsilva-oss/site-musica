@@ -1,0 +1,257 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MusicPedia — Enciclopédia Musical</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        <span>♫</span> MusicPedia
+    </div>
+
+    <div class="search">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Pesquisar gênero, artista ou banda..."
+        >
+        <button onclick="pesquisar()">Pesquisar</button>
+    </div>
+
+</header>
+
+
+<nav class="navbar">
+
+    <button onclick="mostrarPagina('inicio')">
+        Início
+    </button>
+
+    <button onclick="mostrarPagina('generos')">
+        Gêneros
+    </button>
+
+    <button onclick="mostrarPagina('artistas')">
+        Artistas e Bandas
+    </button>
+
+    <button onclick="mostrarPagina('quiz')">
+        Quiz Musical
+    </button>
+
+</nav>
+
+
+<main>
+
+    <!-- INÍCIO -->
+
+    <section id="inicio" class="pagina">
+
+        <div class="hero">
+
+            <h1>MusicPedia</h1>
+
+            <p>
+                A enciclopédia dos gêneros, artistas e bandas
+                que marcaram a história da música.
+            </p>
+
+            <button class="hero-button"
+                onclick="mostrarPagina('generos')">
+                Explorar música
+            </button>
+
+        </div>
+
+
+        <h2>Gêneros populares</h2>
+
+        <div class="cards">
+
+            <article class="card" onclick="abrirGenero('Rock')">
+                <div class="card-icon">🎸</div>
+                <h3>Rock</h3>
+                <p>
+                    Um dos gêneros mais influentes da música moderna.
+                </p>
+            </article>
+
+            <article class="card" onclick="abrirGenero('Metal')">
+                <div class="card-icon">🤘</div>
+                <h3>Metal</h3>
+                <p>
+                    Guitarras pesadas, riffs marcantes e grande variedade
+                    de subgêneros.
+                </p>
+            </article>
+
+            <article class="card" onclick="abrirGenero('Pop')">
+                <div class="card-icon">🎤</div>
+                <h3>Pop</h3>
+                <p>
+                    Música popular criada para alcançar grandes públicos.
+                </p>
+            </article>
+
+            <article class="card" onclick="abrirGenero('Hip-Hop')">
+                <div class="card-icon">🎧</div>
+                <h3>Hip-Hop</h3>
+                <p>
+                    Cultura musical que inclui rap, DJing e outras formas
+                    de expressão.
+                </p>
+            </article>
+
+        </div>
+
+
+        <div class="featured">
+
+            <h2>Artistas em destaque</h2>
+
+            <div class="artist-grid">
+
+                <article class="artist-card"
+                    onclick="abrirArtista('Metallica')">
+                    <div class="artist-image">M</div>
+                    <h3>Metallica</h3>
+                    <p>Thrash Metal</p>
+                </article>
+
+                <article class="artist-card"
+                    onclick="abrirArtista('The Beatles')">
+                    <div class="artist-image">B</div>
+                    <h3>The Beatles</h3>
+                    <p>Rock</p>
+                </article>
+
+                <article class="artist-card"
+                    onclick="abrirArtista('Michael Jackson')">
+                    <div class="artist-image">MJ</div>
+                    <h3>Michael Jackson</h3>
+                    <p>Pop</p>
+                </article>
+
+                <article class="artist-card"
+                    onclick="abrirArtista('Eminem')">
+                    <div class="artist-image">E</div>
+                    <h3>Eminem</h3>
+                    <p>Hip-Hop</p>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- GÊNEROS -->
+
+    <section id="generos" class="pagina hidden">
+
+        <div class="page-header">
+
+            <h1>Gêneros Musicais</h1>
+
+            <p>
+                Explore diferentes estilos e suas histórias.
+            </p>
+
+        </div>
+
+
+        <div id="generosContainer" class="genre-list"></div>
+
+    </section>
+
+
+
+    <!-- ARTISTAS -->
+
+    <section id="artistas" class="pagina hidden">
+
+        <div class="page-header">
+
+            <h1>Artistas e Bandas</h1>
+
+            <p>
+                Conheça artistas que marcaram gerações.
+            </p>
+
+        </div>
+
+
+        <div id="artistasContainer" class="artist-grid"></div>
+
+    </section>
+
+
+
+    <!-- DETALHES -->
+
+    <section id="detalhes" class="pagina hidden">
+
+        <button class="back-button"
+            onclick="mostrarPagina('generos')">
+            ← Voltar
+        </button>
+
+        <div id="detalhesContainer"></div>
+
+    </section>
+
+
+
+    <!-- QUIZ -->
+
+    <section id="quiz" class="pagina hidden">
+
+        <div class="quiz-header">
+
+            <h1>Quiz Musical</h1>
+
+            <p>
+                Teste seus conhecimentos sobre música!
+            </p>
+
+        </div>
+
+        <div id="quizContainer"></div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        <strong>MusicPedia</strong>
+        <p>Uma enciclopédia musical feita para fãs de música.</p>
+    </div>
+
+    <div>
+        <p>Projeto educacional</p>
+        <p>© 2026 MusicPedia</p>
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
